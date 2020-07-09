@@ -604,12 +604,12 @@ class FloatingPanelCore: NSObject, UIGestureRecognizerDelegate {
         }
 
         stopScrollDeceleration = surfaceView.frame.minY > (layoutAdapter.topY + (1.0 / surfaceView.traitCollection.displayScale)) // Projecting the dragging to the scroll dragging or not
-        if stopScrollDeceleration {
-            DispatchQueue.main.async { [weak self] in
-                guard let `self` = self else { return }
-                self.stopScrollingWithDeceleration(at: self.initialScrollOffset)
-            }
-        }
+//         if stopScrollDeceleration {
+//             DispatchQueue.main.async { [weak self] in
+//                 guard let `self` = self else { return }
+//                 self.stopScrollingWithDeceleration(at: self.initialScrollOffset)
+//             }
+//         }
 
         let currentY = surfaceView.frame.minY
         let targetPosition = self.targetPosition(from: currentY, with: velocity)
